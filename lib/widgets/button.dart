@@ -5,17 +5,21 @@ class Button extends StatelessWidget {
     super.key,
     required this.text,
     required this.color,
+    required this.onPressed,
     this.textColor = Colors.white,
   });
 
   final String text;
+  final void Function() onPressed;
   final Color color;
   final Color textColor;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        onPressed();
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
         shape: const StadiumBorder(),

@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.2.0
+  font_awesome_flutter: ^10.8.0
   vector_graphics: ^1.1.19
 
 dev_dependencies:
@@ -20,7 +21,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets: 
+  assets:
     - "assets/a/"
     - "assets/logos/"
+    - "assets/topics/"
     - "assets/logo.svg"

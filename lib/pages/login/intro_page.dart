@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:silent_moon/pages/login/login_page.dart';
+import 'package:silent_moon/pages/login/signup_page.dart';
 import 'package:silent_moon/widgets/button.dart';
 
 class IntroPage extends StatelessWidget {
@@ -10,12 +12,12 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Stack(
-            children: [
-              Image.asset("assets/a/image1.png"),
-              Column(
+        body: Stack(
+          children: [
+            Image.asset("assets/a/image1.png"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
@@ -36,7 +38,7 @@ class IntroPage extends StatelessWidget {
                         SvgPicture.asset("assets/logo.svg"),
                         SizedBox(width: 10),
                         Text(
-                          "moon",
+                          "Moon",
 
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -71,7 +73,15 @@ class IntroPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 62),
-                  Button(text: "SIGN UP", color: Color(0xFF8E97FD)),
+                  Button(
+                    text: "SIGN UP",
+                    color: Color(0xFF8E97FD),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => SignupPage()),
+                      );
+                    },
+                  ),
                   SizedBox(height: 44),
 
                   Text.rich(
@@ -82,28 +92,22 @@ class IntroPage extends StatelessWidget {
                         fontSize: 14,
                       ),
                       children: [
-                        WidgetSpan(
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => LoginPage(),
-                                ),
-                              );
-                            },
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                              minimumSize: Size(0, 0),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text(
-                              "LOG IN",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
+                        TextSpan(
+                          text: "LOG IN",
+                          style: TextStyle(
+                            color: Color(0xFF7583CA), // Figma purple
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
                           ),
+                          recognizer:
+                              TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPage(),
+                                    ),
+                                  );
+                                },
                         ),
                       ],
                     ),
@@ -111,8 +115,8 @@ class IntroPage extends StatelessWidget {
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

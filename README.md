@@ -13,8 +13,8 @@ This project focuses on reproducing the **core user interface** of the Silent Mo
 - Uses Flutter's flexible layout system for responsive designs
 
 ## Screenshots
+you can find them in screenshots folder
 
-(Add relevant screenshots here if possible)
 
 ## License
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:silent_moon/pages/login/main/home_page.dart';
+import 'package:silent_moon/pages/login/main/main_page.dart';
 import 'package:silent_moon/widgets/button.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -62,7 +62,7 @@ class WelcomePage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           //     builder: (context) => DatetimeSelectionPage(),
-                          builder: (context) => HomePage(),
+                          builder: (context) => MainPage(),
                         ),
                       );
                     },

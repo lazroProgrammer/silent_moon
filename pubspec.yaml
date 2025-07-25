@@ -25,4 +25,5 @@ flutter:
     - "assets/a/"
     - "assets/logos/"
     - "assets/topics/"
+    - "assets/icons/"
     - "assets/logo.svg"

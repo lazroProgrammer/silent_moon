@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:silent_moon/pages/login/main/bottom_navbar_pages/course_page.dart';
 
 class CollectionCard extends StatelessWidget {
   const CollectionCard({
@@ -70,7 +71,11 @@ class CollectionCard extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => CoursePage()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
                         isDark ? Color(0xFFEBEAEC) : Color(0xFF3F414E),

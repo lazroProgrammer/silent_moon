@@ -21,8 +21,18 @@ class Stats extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        iconMapping[type]["icon"],
-        Text("$number ${iconMapping[type]["word"]}"),
+        Container(
+          margin: EdgeInsets.only(right: 8),
+          child: iconMapping[type]["icon"],
+        ),
+
+        Text(
+          "$number ${iconMapping[type]["word"]}",
+          style: TextStyle(
+            color: Color(0xFFA1A4B2),
+            fontWeight: FontWeight.w500,
+          ),
+        ),
       ],
     );
   }

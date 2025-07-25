@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:silent_moon/widgets/collection_card.dart';
 import 'package:silent_moon/widgets/genre_card.dart';
+import 'package:silent_moon/widgets/home_page/collection_card.dart';
 import 'package:silent_moon/widgets/svg_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,6 +57,7 @@ class HomePage extends StatelessWidget {
                     fontSize: 20,
                   ),
                 ),
+                SizedBox(height: 20),
                 Row(
                   spacing: 20,
                   children: [

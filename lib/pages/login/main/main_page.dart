@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:silent_moon/pages/login/main/bottom_navbar_pages/home_page.dart';
 import 'package:silent_moon/pages/login/main/bottom_navbar_pages/meditate_page.dart';
+import 'package:silent_moon/pages/login/main/bottom_navbar_pages/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -17,7 +18,7 @@ class _MainPageState extends State<MainPage> {
     Container(),
     MeditatePage(),
     Container(),
-    Container(),
+    MePage(),
   ];
   final List<_NavItem> items = [
     _NavItem('assets/icons/home.svg', 'Home'),

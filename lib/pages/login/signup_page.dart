@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:silent_moon/pages/login/main/topics_page.dart';
 import 'package:silent_moon/widgets/button.dart';
 import 'package:silent_moon/widgets/button_with_icon.dart';
 import 'package:silent_moon/widgets/text_field.dart';
@@ -89,15 +90,7 @@ class SignupPage extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 14,
                               ),
-                              recognizer:
-                                  TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                          builder: (context) => Container(),
-                                        ),
-                                      );
-                                    },
+                              recognizer: TapGestureRecognizer()..onTap = () {},
                             ),
                           ],
                         ),
@@ -113,7 +106,11 @@ class SignupPage extends StatelessWidget {
                 child: Button(
                   text: "GET STARTED",
                   color: Color(0xFF8E97FD),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => TopicsPage()),
+                    );
+                  },
                 ),
               ),
             ],

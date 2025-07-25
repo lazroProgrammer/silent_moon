@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:silent_moon/pages/login/main/topics_page.dart';
+import 'package:silent_moon/pages/login/main/datetime_selection_page.dart';
 import 'package:silent_moon/pages/login/main/welcome_page.dart';
 import 'package:silent_moon/pages/login/signup_page.dart';
 import 'package:silent_moon/widgets/button.dart';
@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
                   color: Color(0xFF8E97FD),
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TopicsPage()),
+                      MaterialPageRoute(builder: (context) => WelcomePage()),
                     );
                   },
                 ),
@@ -81,7 +81,9 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   // ! just for testing screens
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => WelcomePage()),
+                    MaterialPageRoute(
+                      builder: (context) => DatetimeSelectionPage(),
+                    ),
                   );
                 },
                 style: TextButton.styleFrom(
@@ -94,7 +96,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 90),
               Text.rich(
                 TextSpan(
-                  text: "ALREADY HAVE AN ACCOUNT? ",
+                  text: "DON'T HAVE AN ACCOUNT? ",
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                   children: [
                     TextSpan(
